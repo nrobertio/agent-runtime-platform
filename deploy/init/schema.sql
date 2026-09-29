@@ -1,0 +1,2 @@
+-- Loaded into PostgreSQL on first start. Mirror of db/schema.sql.
+-- See ../../db/schema.sql for the authoritative schema.
