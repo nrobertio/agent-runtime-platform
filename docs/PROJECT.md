@@ -1,6 +1,6 @@
 # Project Writeup: Agent Runtime Platform
 
-Why this exists, how it was built, why each choice, benefits, and interview talking points. Built to map to agent-infrastructure and platform roles: durable execution, sandboxed compute, self-hostable single-tenant delivery, and observability.
+Why this exists, how it was built, why each choice, benefits, and design trade-offs. Built to map to agent-infrastructure and platform roles: durable execution, sandboxed compute, self-hostable single-tenant delivery, and observability.
 
 ## 1. The problem it solves
 
@@ -29,7 +29,7 @@ Running AI agents that write, test and deploy code in production is not a chatbo
 - Portability: the whole platform self-hosts for one customer with a single command.
 - Operability: traced end to end from day one.
 
-## 5. Interview talking points
+## 5. Design notes and trade-offs
 
 - Durable execution: why long-running agent work must persist each transition, and how resume-on-startup works (query runs in the running state, continue them).
 - Sandbox threat model: agent code is untrusted; mitigations are no network, read-only rootfs, dropped capabilities, non-root, and CPU/memory/PID limits. What is still missing (seccomp/gVisor/Firecracker for stronger isolation) is the next step.
